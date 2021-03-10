@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Apparel</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./static/images/favicon-32x32.png">
+    <link rel="stylesheet" href="./static/css/index.css">
+</head>
+<body>
+
+    <section class="Hero">
+        <div class="Hero__content">
+
+            <div class="Hero__logo">
+                <img src="./static/images/logo.svg" alt="">
+            </div>
+    
+            <div class="Hero__info">
+                <h1 class="Hero__title">
+                    <span class="Hero__span">WE'RE</span> COMING SOON
+                </h1>
+                <p class="p">
+                        Hello fellow shoppers! We're currently building our new fashion store. 
+                        Add your email below to stay up-to-date with announcements and our launch deals.
+                </p>
+                <div class="Hero__groupInput">
+                    <input id="input" type="text" placeholder="  Email Address" >
+                    <button onclick="myFunction()" id="Button">
+                        <img src="./static/images/icon-arrow.svg" alt="">
+                    </button>
+                    <p><small class="alert" > Please provide a valid email! </small></p>
+                </div>
+                
+            </div>
+
+            <div class="Hero__image"></div>
+
+        </div>
+    </section>
+
+    <script>
+        const Alert = document.querySelector(".alert");
+        function myFunction(){
+            let email = input.value;
+            if(!input.value || !email.includes('@') || !email.includes('.com') ) {
+                Alert.style.display = "block";
+            }else{
+                Alert.style.display = "none";
+            }  
+        }
+    </script>
+
+</body>
+</html>
